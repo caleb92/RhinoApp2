@@ -75,14 +75,14 @@ QToolButton:hover {
 }</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <layout class="QVBoxLayout" name="verticalLayout">
+   <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
      <widget class="QStackedWidget" name="stackedCentral">
       <property name="autoFillBackground">
        <bool>true</bool>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>3</number>
       </property>
       <widget class="QWidget" name="pageFileViewer">
        <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -105,12 +105,34 @@ QToolButton:hover {
       <widget class="QWidget" name="pageSetupCamera">
        <layout class="QVBoxLayout" name="verticalLayout_3">
         <item>
-         <widget class="QLabel" name="label">
+         <widget class="QLabel" name="lblSetupCamera">
           <property name="autoFillBackground">
            <bool>true</bool>
           </property>
           <property name="text">
-           <string>lblSetupCamera</string>
+           <string>this is the pageSetupCamera</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="pageVerification">
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QLabel" name="lblVerification">
+          <property name="text">
+           <string>This is pageVerificaiton</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="pageSettings">
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <widget class="QLabel" name="lblSettings">
+          <property name="text">
+           <string>this is pageSettings</string>
           </property>
          </widget>
         </item>
