@@ -1,0 +1,42 @@
+<RCC>
+    <qresource prefix="/styles">
+        <file>styles/style1.css</file>
+    </qresource>
+    <qresource prefix="/icons">
+        <file>icons/appbar.app.minus.png</file>
+        <file>icons/appbar.app.plus.png</file>
+        <file>icons/appbar.app.png</file>
+        <file>icons/appbar.app.remove.png</file>
+        <file>icons/appbar.browser.wire.png</file>
+        <file>icons/appbar.cabinet.files.png</file>
+        <file>icons/appbar.cabinet.files.variant.png</file>
+        <file>icons/appbar.camera.png</file>
+        <file>icons/appbar.card.1.png</file>
+        <file>icons/appbar.card.2.png</file>
+        <file>icons/appbar.card.3.png</file>
+        <file>icons/appbar.card.4.png</file>
+        <file>icons/appbar.card.5.png</file>
+        <file>icons/appbar.card.6.png</file>
+        <file>icons/appbar.card.7.png</file>
+        <file>icons/appbar.card.8.png</file>
+        <file>icons/appbar.card.9.png</file>
+        <file>icons/appbar.chat.png</file>
+        <file>icons/appbar.check.png</file>
+        <file>icons/appbar.checkmark.cross.png</file>
+        <file>icons/appbar.checkmark.png</file>
+        <file>icons/appbar.checkmark.thick.png</file>
+        <file>icons/appbar.checkmark.thick.unchecked.png</file>
+        <file>icons/appbar.cog.png</file>
+        <file>icons/appbar.cogs.png</file>
+        <file>icons/appbar.control.pause.png</file>
+        <file>icons/appbar.control.play.png</file>
+        <file>icons/appbar.control.stop.png</file>
+        <file>icons/appbar.disk.png</file>
+        <file>icons/appbar.folder.open.png</file>
+        <file>icons/appbar.home.empty.png</file>
+        <file>icons/appbar.home.png</file>
+        <file>icons/appbar.information.png</file>
+        <file>icons/appbar.video.basic.png</file>
+        <file>icons/appbar.video.png</file>
+    </qresource>
+</RCC>

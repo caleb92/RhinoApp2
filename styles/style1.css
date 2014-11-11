@@ -1,0 +1,57 @@
+/* style1.css : based off of google drive colors */
+colors-light {
+header: #FFFFFF; /**/
+menu-top: #FAFAFA; /**/
+menu-left: #EEEEEE; /**/
+menu-hover: #E1E1E1; /**/
+menu-hover-left-border: #616161; /**/
+menu-text-select: #C53929; /**/
+text: #555555 /*For QToolButton inactive*/
+}
+
+QMainWindow {
+	background: #EEEEEE;
+	border-color: black;
+	border-style: none;
+}
+
+QFrame {
+    background: #EEEEEE;
+}
+
+QToolBar {
+    background:#EEEEEE;
+    spacing: 12px; /* spacing between items in the tool bar */
+	padding: 9px;
+	
+ }
+
+QToolBar::handle {
+    image: url(qrc:/icons/icons/appbar.home.empty.png);
+ }
+
+QToolButton {
+	background: #EEEEEE;
+
+	border-width: 3px;
+	border-color:#616161;
+	border-style: solid;
+
+	color: #555555;
+	font-family: "Garamond",Arial,Times;
+	font-size: 16px;
+	font-weight: bold;
+	
+	margin: 0px;
+	padding: 0px;
+
+}
+
+QToolButton:hover {
+	background: #E1E1E1;
+	border-bottom-style: solid;
+}
+
+QToolButton#actionLogo {
+	background: red;
+}
