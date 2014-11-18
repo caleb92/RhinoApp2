@@ -35,7 +35,9 @@ SOURCES += main.cpp\
     stasm/stasm_lib.cpp \
     stasm/MOD_1/facedet.cpp \
     stasm/MOD_1/initasm.cpp \
-    videotools.cpp
+    videotools.cpp \
+    qmyvideotools.cpp \
+    mainwindow2.cpp
 
 HEADERS  += mainwindow.h \
     stasm/asm.h \
@@ -64,7 +66,9 @@ HEADERS  += mainwindow.h \
     stasm/stasm_lib_ext.h \
     stasm/MOD_1/facedet.h \
     stasm/MOD_1/initasm.h \
-    videotools.h
+    videotools.h \
+    qmyvideotools.h \
+    mainwindow2.h
 
 FORMS    += mainwindow.ui
 

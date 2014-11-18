@@ -2,8 +2,6 @@
 #include "ui_mainwindow.h"
 #include <QFile>
 
-#include "videotools.h"
-
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -11,8 +9,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     this->addToolBar(Qt::LeftToolBarArea,ui->mainToolBar); //move tool bar from defult top area to left area
 
-
-
+    videoTools.setParent(this);
 }
 MainWindow::~MainWindow()
 {
@@ -67,8 +64,9 @@ void MainWindow::on_actionExit_triggered()
 
 void MainWindow::processFrame()
 {
-    oVideoTools.getFrame(matProcessed);
-    oVideoTools.landmarkAll(matProcessed);
+    videoTools.getFrame(matProcessed);
+    videoTools.landmarkAll(matProcessed);
+    //videoTools.landmarkNose(matProcessed);
 
     QImage qimgProcessed((uchar*)matProcessed.data, matProcessed.cols, matProcessed.rows, matProcessed.step, QImage::Format_Indexed8);
     ui->lblSetupCamera->setPixmap(QPixmap::fromImage(qimgProcessed));

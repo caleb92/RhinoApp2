@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>757</width>
+    <width>924</width>
     <height>552</height>
    </rect>
   </property>
@@ -78,11 +78,17 @@ QToolButton:hover {
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
      <widget class="QStackedWidget" name="stackedCentral">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
       <property name="autoFillBackground">
        <bool>true</bool>
       </property>
       <property name="currentIndex">
-       <number>3</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="pageFileViewer">
        <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -190,21 +196,41 @@ QToolButton:hover {
    </property>
   </action>
   <action name="actionSetup_Camera">
+   <property name="icon">
+    <iconset>
+     <normalon>:/icons/icons/appbar.camera.png</normalon>
+    </iconset>
+   </property>
    <property name="text">
     <string>Setup Camera</string>
    </property>
   </action>
   <action name="actionVerification">
+   <property name="icon">
+    <iconset>
+     <normalon>:/icons/icons/appbar.checkmark.thick.png</normalon>
+    </iconset>
+   </property>
    <property name="text">
     <string>Verification</string>
    </property>
   </action>
   <action name="actionSettings">
+   <property name="icon">
+    <iconset>
+     <normalon>:/icons/icons/appbar.cog.png</normalon>
+    </iconset>
+   </property>
    <property name="text">
     <string>Settings</string>
    </property>
   </action>
   <action name="actionExit">
+   <property name="icon">
+    <iconset>
+     <normalon>:/icons/icons/appbar.app.remove.png</normalon>
+    </iconset>
+   </property>
    <property name="text">
     <string>Exit</string>
    </property>

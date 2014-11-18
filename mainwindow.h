@@ -8,7 +8,7 @@
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
 
-#include "videotools.h"
+#include "qmyvideotools.h"
 
 namespace Ui {
 class MainWindow;
@@ -35,7 +35,7 @@ private slots:
 private:
     Ui::MainWindow *ui;
 
-    VideoTools oVideoTools;
+    QmyVideoTools videoTools;
 
     QTimer *tmrTimer;
     cv::Mat_<unsigned char> matProcessed;
