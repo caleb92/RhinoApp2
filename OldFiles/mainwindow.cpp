@@ -39,17 +39,16 @@ void MainWindow::on_actionFile_Viewer_triggered()
 void MainWindow::on_actionSetup_Camera_triggered()
 {
     ui->stackedCentral->setCurrentWidget(ui->pageSetupCamera);
-
-    tmrTimer = new QTimer(this);
-    connect(tmrTimer, SIGNAL(timeout()), this, SLOT(processFrame()));
-    tmrTimer->start(20);
 }
-
 
 
 void MainWindow::on_actionVerification_triggered()
 {
     ui->stackedCentral->setCurrentWidget(ui->pageVerification);
+
+    tmrTimer = new QTimer(this);
+    connect(tmrTimer, SIGNAL(timeout()), this, SLOT(processFrame()));
+    tmrTimer->start(20);
 }
 
 void MainWindow::on_actionSettings_triggered()
@@ -59,15 +58,34 @@ void MainWindow::on_actionSettings_triggered()
 
 void MainWindow::on_actionExit_triggered()
 {
-    exit(0);
+    this->close();
 }
 
 void MainWindow::processFrame()
 {
     videoTools.getFrame(matProcessed);
-    videoTools.landmarkAll(matProcessed);
-    //videoTools.landmarkNose(matProcessed);
+
+    nCurrentVideoOption = RAW_GRAY;
+
+    switch(nCurrentVideoOption)
+    {
+    case RAW_GRAY:
+        break;
+    case LANDMARK_ALL:
+        videoTools.landmarkAll(matProcessed);
+        break;
+    case LANDMARK_NOSE:
+        videoTools.landmarkNose(matProcessed);
+        break;
+    }
+
+    videoTools.markCenterPoint(matProcessed);
 
     QImage qimgProcessed((uchar*)matProcessed.data, matProcessed.cols, matProcessed.rows, matProcessed.step, QImage::Format_Indexed8);
+
+    qimgProcessed = qimgProcessed.scaled(ui->lblVerification->size(),
+                                         Qt::KeepAspectRatio,
+                                         Qt::SmoothTransformation);
+
     ui->lblSetupCamera->setPixmap(QPixmap::fromImage(qimgProcessed));
 }

@@ -35,6 +35,14 @@ private slots:
 private:
     Ui::MainWindow *ui;
 
+    int nCurrentVideoOption;
+    enum VideoOptions
+    {
+        RAW_GRAY,
+        LANDMARK_ALL,
+        LANDMARK_NOSE
+    };
+
     QmyVideoTools videoTools;
 
     QTimer *tmrTimer;

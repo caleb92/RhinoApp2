@@ -13,7 +13,6 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp \
     stasm/asm.cpp \
     stasm/classicdesc.cpp \
     stasm/convshape.cpp \
@@ -35,11 +34,14 @@ SOURCES += main.cpp\
     stasm/stasm_lib.cpp \
     stasm/MOD_1/facedet.cpp \
     stasm/MOD_1/initasm.cpp \
-    videotools.cpp \
-    qmyvideotools.cpp \
-    mainwindow2.cpp
+    mainwindow3.cpp \
+    displaylabel.cpp \
+    fileviewer.cpp \
+    videowindow2.cpp \
+    videotools2.cpp \
+    drawtools.cpp
 
-HEADERS  += mainwindow.h \
+HEADERS  += \
     stasm/asm.h \
     stasm/atface.h \
     stasm/basedesc.h \
@@ -66,11 +68,14 @@ HEADERS  += mainwindow.h \
     stasm/stasm_lib_ext.h \
     stasm/MOD_1/facedet.h \
     stasm/MOD_1/initasm.h \
-    videotools.h \
-    qmyvideotools.h \
-    mainwindow2.h
+    mainwindow3.h \
+    displaylabel.h \
+    fileviewer.h \
+    videowindow2.h \
+    videotools2.h \
+    drawtools.h
 
-FORMS    += mainwindow.ui
+FORMS    +=
 
 RESOURCES += \
     RhinoApp2.qrc

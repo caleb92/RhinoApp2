@@ -17,6 +17,7 @@ class QmyVideoTools : public QObject
 
 public:
     explicit QmyVideoTools(QObject *parent = 0);
+    ~QmyVideoTools();
 
 signals:
 
@@ -27,7 +28,7 @@ public slots:
     void landmarkAll(cv::Mat_<unsigned char>& frame);
     void landmarkNose(cv::Mat_<unsigned char>& frame);
 
-    //void markCenterPoint(cv::Mat_<unsigned char>& frame, float* landmarks);
+    void markCenterPoint(cv::Mat_<unsigned char>& frame);
 
 private:
     bool bStreamPaused;

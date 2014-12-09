@@ -9,6 +9,10 @@
 #include <QTabWidget>
 #include <QLabel>
 #include <QGridLayout>
+#include <QTextEdit>
+#include <QStatusBar>
+#include <QToolButton>
+#include <QWidget>
 
 class MainWindow2 : public QMainWindow
 {
@@ -19,20 +23,35 @@ public:
     ~MainWindow2();
 
 private:
-    void setupGUI();
+    void setupToolBar();
+    void setupCentral();
+    void setupPageStart();
+    void setupPageFiles();
+    void setupPageSetup();
+    void setupPageVerif();
+    void applyCSS();
 
     QToolBar *toolBar;
-    QAction *actFiles;
-    QAction *actSetup;
-    QAction *actVerif;
-    QAction *actExit;
-    QAction *actCSS;
+    QWidget *toolWidget;
+    QVBoxLayout *layToolBar;
+    QActionGroup *actGroupToolBar;
+    QAction *actStart; QToolButton *btnStart;
+    QAction *actFiles; QToolButton *btnFiles;
+    QAction *actSetup; QToolButton *btnSetup;
+    QAction *actVerif; QToolButton *btnVerif;
+    QAction *actExit; QToolButton *btnExit;
+    QAction *actCSS; QToolButton *btnCSS;
 
     QStackedWidget *stackedMain;
+
+    QWidget *pageStart;
+    QGridLayout *layStart;
+    QLabel *lblStart;
 
     QWidget *pageFiles;
     QGridLayout *layFiles;
     QTabWidget *tabFiles;
+    QTextEdit *txtDefaultTab;
 
     QWidget *pageSetup;
     QGridLayout *laySetup;
@@ -43,6 +62,7 @@ private:
     QLabel *lblVerif;
 
 private slots:
+    void on_actStart_triggered();
     void on_actFiles_triggered();
     void on_actSetup_triggered();
     void on_actVerif_triggered();

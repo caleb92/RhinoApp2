@@ -38,5 +38,9 @@
         <file>icons/appbar.information.png</file>
         <file>icons/appbar.video.basic.png</file>
         <file>icons/appbar.video.png</file>
+        <file>icons/appbar.new.window.png</file>
+    </qresource>
+    <qresource prefix="/images">
+        <file>images/logo.png</file>
     </qresource>
 </RCC>
